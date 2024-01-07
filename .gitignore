@@ -1,3 +1,5 @@
 .env
 venv
 data.json
+historic_data.json
+summary.json
