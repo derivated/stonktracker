@@ -3,11 +3,154 @@
 <head>
     <title>Stonktracker!</title>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="body">
     <div id="header">
-        <h1>Stonktracker</h1>
+        <h1 id="title">Stonktracker</h1>
     </div>
+    <div id="charts">
+        <div id="buySellPrice" class="chartDiv">
+            <canvas id="buySellPriceChart"></canvas>
+        </div>
+        <div id="buySellMovingWeek" class="chartDiv">
+            <canvas id="buySellMovingWeekChart"></canvas>
+        </div>
+        <div id="buySellPriceHistorical" class="chartDiv">
+            <canvas id="buySellPriceChartHistorical"></canvas>
+        </div>
+        <div id="buySellMovingWeekHistorical" class="chartDiv">
+            <canvas id="buySellMovingWeekChartHistorical"></canvas>
+        </div>
+    </div>
+    <div id="summaryDiv">
+        <div id="buySummaryDiv" class="tables">
+            <h2 class="tableTitle">Buy Orders</h2>
+            <table>
+                <tr>
+                    <th>Orders</th>
+                    <th>Amount</th>
+                    <th>Unit Price</th>
+                </tr>
+                <tr>
+                    <th id="buyOrders1">0</th>
+                    <th id="buyAmount1">0</th>
+                    <th id="buyPrice1">0</th>
+                </tr>
+                <tr>
+                    <th id="buyOrders2">0</th>
+                    <th id="buyAmount2">0</th>
+                    <th id="buyPrice2">0</th>
+                </tr>
+                <tr>
+                    <th id="buyOrders3">0</th>
+                    <th id="buyAmount3">0</th>
+                    <th id="buyPrice3">0</th>
+                </tr>
+                <tr>
+                    <th id="buyOrders4">0</th>
+                    <th id="buyAmount4">0</th>
+                    <th id="buyPrice4">0</th>
+                </tr>
+                <tr>
+                    <th id="buyOrders5">0</th>
+                    <th id="buyAmount5">0</th>
+                    <th id="buyPrice5">0</th>
+                </tr>
+                <tr>
+                    <th id="buyOrders6">0</th>
+                    <th id="buyAmount6">0</th>
+                    <th id="buyPrice6">0</th>
+                </tr>
+                <tr>
+                    <th id="buyOrders7">0</th>
+                    <th id="buyAmount7">0</th>
+                    <th id="buyPrice7">0</th>
+                </tr>
+                <tr>
+                    <th id="buyOrders8">0</th>
+                    <th id="buyAmount8">0</th>
+                    <th id="buyPrice8">0</th>
+                </tr>
+                <tr>
+                    <th id="buyOrders9">0</th>
+                    <th id="buyAmount9">0</th>
+                    <th id="buyPrice9">0</th>
+                </tr>
+                <tr>
+                    <th id="buyOrders10">0</th>
+                    <th id="buyAmount10">0</th>
+                    <th id="buyPrice10">0</th>
+                </tr>
+            </table>
+        </div>
+        <div id="sellSummaryDiv" class="tables">
+            <h2 class="tableTitle">Sell Orders</h2>
+            <table>
+                <tr>
+                    <th>Orders</th>
+                    <th>Amount</th>
+                    <th>Unit Price</th>
+                </tr>
+                <tr>
+                    <th id="sellOrders1">0</th>
+                    <th id="sellAmount1">0</th>
+                    <th id="sellPrice1">0</th>
+                </tr>
+                <tr>
+                    <th id="sellOrders2">0</th>
+                    <th id="sellAmount2">0</th>
+                    <th id="sellPrice2">0</th>
+                </tr>
+                <tr>
+                    <th id="sellOrders3">0</th>
+                    <th id="sellAmount3">0</th>
+                    <th id="sellPrice3">0</th>
+                </tr>
+                <tr>
+                    <th id="sellOrders4">0</th>
+                    <th id="sellAmount4">0</th>
+                    <th id="sellPrice4">0</th>
+                </tr>
+                <tr>
+                    <th id="sellOrders5">0</th>
+                    <th id="sellAmount5">0</th>
+                    <th id="sellPrice5">0</th>
+                </tr>
+                <tr>
+                    <th id="sellOrders6">0</th>
+                    <th id="sellAmount6">0</th>
+                    <th id="sellPrice6">0</th>
+                </tr>
+                <tr>
+                    <th id="sellOrders7">0</th>
+                    <th id="sellAmount7">0</th>
+                    <th id="sellPrice7">0</th>
+                </tr>
+                <tr>
+                    <th id="sellOrders8">0</th>
+                    <th id="sellAmount8">0</th>
+                    <th id="sellPrice8">0</th>
+                </tr>
+                <tr>
+                    <th id="sellOrders9">0</th>
+                    <th id="sellAmount9">0</th>
+                    <th id="sellPrice9">0</th>
+                </tr>
+                <tr>
+                    <th id="sellOrders10">0</th>
+                    <th id="sellAmount10">0</th>
+                    <th id="sellPrice10">0</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+<script type="module" src="js/bundledCharts.js"></script>
+
+
 
 </body>
 </html>
