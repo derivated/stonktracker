@@ -61,9 +61,11 @@ async def main():
         data["data"]["buyMovingWeek"][timestamp] = newData["products"]["STOCK_OF_STONKS"]["quick_status"]["buyMovingWeek"]
 
         for i in range(10):
-            summaryData["data"]["sellSummary"][str(i + 1)] = newData["products"]["STOCK_OF_STONKS"]["sell_summary"][i]
-            summaryData["data"]["buySummary"][str(i + 1)] = newData["products"]["STOCK_OF_STONKS"]["buy_summary"][i]
-
+            try:
+                summaryData["data"]["sellSummary"][str(i + 1)] = newData["products"]["STOCK_OF_STONKS"]["sell_summary"][i]
+                summaryData["data"]["buySummary"][str(i + 1)] = newData["products"]["STOCK_OF_STONKS"]["buy_summary"][i]
+            except:
+                break
 
         f = open("data.json", "w")
         f.write(str(data).replace("'", '"'))
