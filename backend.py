@@ -55,15 +55,15 @@ async def main():
     while loop:
         newData = get_data()
         timestamp = str(int(time.mktime(dt.datetime.now(tz.timezone('America/Los_Angeles')).timetuple())))
-        data["data"]["sellPrice"][timestamp] = newData["products"]["STOCK_OF_STONKS"]["quick_status"]["sellPrice"]
-        data["data"]["buyPrice"][timestamp] = newData["products"]["STOCK_OF_STONKS"]["quick_status"]["buyPrice"]
-        data["data"]["sellMovingWeek"][timestamp] = newData["products"]["STOCK_OF_STONKS"]["quick_status"]["sellMovingWeek"]
-        data["data"]["buyMovingWeek"][timestamp] = newData["products"]["STOCK_OF_STONKS"]["quick_status"]["buyMovingWeek"]
+        data["data"]["sellPrice"][timestamp] = newData["products"]["BOOSTER_COOKIE"]["quick_status"]["sellPrice"]
+        data["data"]["buyPrice"][timestamp] = newData["products"]["BOOSTER_COOKIE"]["quick_status"]["buyPrice"]
+        data["data"]["sellMovingWeek"][timestamp] = newData["products"]["BOOSTER_COOKIE"]["quick_status"]["sellMovingWeek"]
+        data["data"]["buyMovingWeek"][timestamp] = newData["products"]["BOOSTER_COOKIE"]["quick_status"]["buyMovingWeek"]
 
         for i in range(10):
             try:
-                summaryData["data"]["sellSummary"][str(i + 1)] = newData["products"]["STOCK_OF_STONKS"]["sell_summary"][i]
-                summaryData["data"]["buySummary"][str(i + 1)] = newData["products"]["STOCK_OF_STONKS"]["buy_summary"][i]
+                summaryData["data"]["sellSummary"][str(i + 1)] = newData["products"]["BOOSTER_COOKIE"]["sell_summary"][i]
+                summaryData["data"]["buySummary"][str(i + 1)] = newData["products"]["BOOSTER_COOKIE"]["buy_summary"][i]
             except:
                 break
 
